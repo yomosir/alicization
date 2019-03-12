@@ -1,0 +1,8 @@
+server:
+  port: 8001
+spring:
+  resources:
+    static-locations: /static/**
+  thymeleaf:
+    prefix: /templates/
+    suffix: .html
