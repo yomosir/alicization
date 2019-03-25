@@ -1,22 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thtmeleaf.org" xmlns:form="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Login</title>
-    <link href="../../static/common/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{../../static/common/bootstrap.min.css}" rel="stylesheet" >
     <style>
-        *{margin: 0;padding: 0}
-        html,body{height: 100%}     /*这里很关键*/
+        * {
+            margin: 0;
+            padding: 0
+        }
 
-        .outer-wrap{
+        html, body {
+            height: 100%
+        }  /*这里很关键*/
+
+        .outer-wrap {
             /*只有同时为html和body设置height: 100%时，这里的height才生效，
             并且随浏览器窗口变化始终保持和浏览器视窗等高*/
             height: 100%;
             position: relative;
             background-color: #ffffff;
         }
-        .login-panel{
+
+        .login-panel {
             width: 400px;
             height: 300px;
             background-color: #1b6d85;
@@ -29,7 +36,7 @@
             border-radius: 10px;
             color: #ffffff;
         }
-        .black-font{
+        .black-font {
             color: #000000;
         }
     </style>
@@ -40,12 +47,12 @@
         <h1><label>Login</label></h1>
         <form>
             <div class="form-group">
-                <label for="exampleInputEmail1">Account</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                <label for="exampleInputAccount">Account</label>
+                <input type="email" class="form-control" id="exampleInputAccount" placeholder="Email">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                <label for="exampleInputPassword">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
             </div>
             <div class="checkbox">
                 <label>
@@ -56,7 +63,12 @@
         </form>
     </div>
 </div>
-    <script src="../../static/common/jquery-3.3.1.min.js"></script>
-    <script src="../../static/common/bootstrap.min.js" ></script>
+<script th:src="@{../../static/common/jquery-3.3.1.min.js}"></script>
+<script th:src="@{../../static/common/bootstrap.min.js}"></script>
+<script type="text/javascript">
+    function judgeAccount(){
+
+    }
+</script>
 </body>
 </html>
