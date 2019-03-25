@@ -1,8 +1,10 @@
 server:
   port: 8001
 spring:
-  resources:
-    static-locations: /static/**
   thymeleaf:
-    prefix: /templates/
     suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    cache: false
+  mvc:
+    static-path-pattern: /static/**
