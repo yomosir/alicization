@@ -6,5 +6,7 @@ spring:
     mode: LEGACYHTML5
     encoding: UTF-8
     cache: false
+    prefix:
+      classpath: /templates
   mvc:
     static-path-pattern: /static/**

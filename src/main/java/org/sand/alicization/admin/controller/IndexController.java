@@ -17,6 +17,6 @@ public class IndexController {
     @RequestMapping(value = "/login")
     public ModelAndView index(ModelMap map){
         map.put("name","test");
-        return new ModelAndView("/admin/login");
+        return new ModelAndView("admin/login");
     }
 }
